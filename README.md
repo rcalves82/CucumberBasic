@@ -1,2 +1,2 @@
 # CucumberBasic
-Curso de Automação do Zero Cucmber
+Curso de Automação do Zero Cucumber
