@@ -6,7 +6,6 @@ Funcionalidade: Login
     Posso acessar o sistema com meu e-mail e minha senha
 
 @logout
-@temp
 Cenário: Usuário autenticado
 
 	Dado que estou na página de login
