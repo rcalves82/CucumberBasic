@@ -5,7 +5,7 @@ Funcionalidade: Login
     Sendo um usuário cadastrado
     Posso acessar o sistema com meu e-mail e minha senha
 
-@logout
+@logout @smoke
 Cenário: Usuário autenticado
 
 	Dado que estou na página de login
@@ -25,7 +25,7 @@ Esquema do Cenario: Tentativa de logar
       |                     | xpto123 | Email incorreto ou ausente. |
       | eu@gmail.com        |         | Senha ausente.              |
       | rui.alves@gmail.com | xpto123 | Usuário não cadastrado.     |
-@temp
+
 Cenario: Bloqueia apos 6 tentativas
 
 	Dado que estou na página de login

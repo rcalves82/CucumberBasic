@@ -1,15 +1,17 @@
+class LoginPage
+  include Capybara::DSL
 
-class LoginPage < SitePrism::Page
-    set_url '/login'
+  def load
+    visit '/login'
+  end
 
-    element :campo_email, 'input[placeholder="example@gmail.com"]'
-    element :campo_senha, 'input[type=password]'
-    element :botao_entrar, 'button[id*=btnLogin]'
-    element :alerta, '.alert-login'
+  def logar(email, senha)
+    find('input[placeholder*=mail]').set email
+    find('input[type=password]').set senha
+    find('button[id*=btnLogin]').click
+  end
 
-    def logar(email, senha)
-        campo_email.set email
-        campo_senha.set senha
-        botao_entrar.click
-    end
-end 
+  def alerta
+    find('.alert-login')
+  end
+end
