@@ -13,3 +13,8 @@ Criando o projeto Base - comandos
 
 Criando o projeto de especificação com o cucumber
 * na pasta do projeto execute o comando cucumber --init
+
+Extensão que formata no VisualCode para ruby
+* comando gem install rubocop
+* ir no visual code e incluir biblioteca do Rubocop (ruby-rubocop)
+
