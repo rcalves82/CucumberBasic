@@ -5,7 +5,7 @@ Dado('que estou na página de login') do
 end
 
 Dado("a quantidade máxima de login é de {int} tentativas") do |tentativa|
-    @tentativa = tentativa + 1    
+    @tentativa = tentativa + 1  
 end 
   
 Quando('faço login com {string} e {string}') do |email, senha|
@@ -14,7 +14,7 @@ end
 
 Quando("tento logar com {string} e {string}") do |email, senha|
     @tentativa.times do
-        @login_page.logar(email, senha)
+        @login_page.logar(email, senha)        
     end
   end
   

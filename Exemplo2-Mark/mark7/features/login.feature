@@ -25,10 +25,10 @@ Esquema do Cenario: Tentativa de logar
       |                     | xpto123 | Email incorreto ou ausente. |
       | eu@gmail.com        |         | Senha ausente.              |
       | rui.alves@gmail.com | xpto123 | Usuário não cadastrado.     |
-
+@temp
 Cenario: Bloqueia apos 6 tentativas
 
 	Dado que estou na página de login
-	E a quantidade máxima de login é de 5 tentativas
+	E a quantidade máxima de login é de 6 tentativas
 	Quando tento logar com "eu@papito.io" e "xpto123"
 	Então devo ver a mensagem de alerta "Usuário bloqueado. Por favor aguarde 10 segundos, e tente novamente."
