@@ -11,6 +11,10 @@ class LoginPage
     find('button[id*=btnLogin]').click
   end
 
+  def estou_pagina?
+    page.has_css?('#login_form')
+  end
+
   def alerta
     find('.alert-login')
   end

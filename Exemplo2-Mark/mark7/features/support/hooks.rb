@@ -1,4 +1,14 @@
+Before do
+  @page = Pages.new
+  @component = Components.new
+end
+
+Before('@login') do
+  @page.login.load
+  @page.login.logar('eu@papito.io', '123456')
+end
+
 After('@logout') do
-    @nav = Navbar.new
-    @nav.sair
+  @component.nav.sair
+  expect(@page.login.estou_pagina?).to be true
 end
