@@ -18,3 +18,15 @@ Funcionalidade: Cadastrar tarefas
             | video aulas |
         Quando eu faço o cadastro desta tarefa
         Então devo ver este cadastro na lista com o status "Em andamento"
+
+     @login @nova_tarefa_dinamica
+    Cenario: Nova tarefa dinâmica   
+
+        Dado que "Estudar MongoDB" é a minha nova tarefa dinâmica
+        E devo finalizar esta tarefa até "01/11/2019"
+        E além disso quero taguear esta tarefa com:
+            | tag         |
+            | database    |
+            | mongoDB     |
+        Quando eu faço o cadastro desta tarefa
+        Então devo ver este cadastro na lista com o status "Em andamento"

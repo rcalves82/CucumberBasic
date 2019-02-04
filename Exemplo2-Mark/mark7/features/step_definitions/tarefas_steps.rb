@@ -1,5 +1,15 @@
+require 'faker'
+
 Dado('que {string} é a minha nova tarefa') do |nova_tarefa|
   @nova_tarefa = { nome: nova_tarefa, data: nil, tags: [] }
+end
+
+Dado('que {string} é a minha nova tarefa dinâmica') do |nova_tarefa|
+  @nova_tarefa = {
+    nome: "#{nova_tarefa} - #{Faker::Lorem.characters(10)}",
+    data: nil,
+    tags: []
+  }
 end
 
 Dado('devo finalizar esta tarefa até {string}') do |data_tarefa|
