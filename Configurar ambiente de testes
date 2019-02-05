@@ -18,3 +18,6 @@ Extensão que formata no VisualCode para ruby
 * comando gem install rubocop
 * ir no visual code e incluir biblioteca do Rubocop (ruby-rubocop)
 
+Procurar bibliotecas Ruby
+* gem para serem usadas ex: mongo, sql.  site: https://rubygems.org/
+

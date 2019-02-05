@@ -8,7 +8,7 @@ Funcionalidade: Cadastrar tarefas
     @login @nova_tarefa
     Cenario: Nova tarefa
 
-        Dado que "Estudar Testes 1" é a minha nova tarefa
+        Dado que "Estudar Ruby" é a minha nova tarefa
         E devo finalizar esta tarefa até "01/11/2019"
         E além disso quero taguear esta tarefa com:
             | tag         |

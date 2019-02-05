@@ -2,6 +2,7 @@ require 'faker'
 
 Dado('que {string} é a minha nova tarefa') do |nova_tarefa|
   @nova_tarefa = { nome: nova_tarefa, data: nil, tags: [] }
+  MarkDb.new.apaga_tarefa(nova_tarefa)
 end
 
 Dado('que {string} é a minha nova tarefa dinâmica') do |nova_tarefa|
