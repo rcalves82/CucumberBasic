@@ -18,6 +18,10 @@ class TarefasPage
     find('#task-board h3')
   end
 
+  def obter_tr_por_nome(nome)
+    find('table tbody tr', text: nome)
+  end
+
   private
 
   def insere_tags(tags)

@@ -19,7 +19,7 @@ Funcionalidade: Cadastrar tarefas
         Quando eu faço o cadastro desta tarefa
         Então devo ver este cadastro na lista com o status "Em andamento"
 
-     @login @nova_tarefa_dinamica
+    @login @nova_tarefa_dinamica
     Cenario: Nova tarefa dinâmica   
 
         Dado que "Estudar MongoDB" é a minha nova tarefa dinâmica

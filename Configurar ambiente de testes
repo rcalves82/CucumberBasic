@@ -21,3 +21,6 @@ Extensão que formata no VisualCode para ruby
 Procurar bibliotecas Ruby
 * gem para serem usadas ex: mongo, sql.  site: https://rubygems.org/
 
+Consultar registro no Mongo
+* db.getCollection('tasks').find({'title' : 'Estudar Ruby'})
+
