@@ -1,4 +1,8 @@
+# hooks.rb
+
 Before do
+  # @page = Pages.new
+  # @component = Components.new
   @page = Pages.new
   @component = Components.new
 end
@@ -10,5 +14,5 @@ end
 
 After('@logout') do
   @component.nav.sair
-  expect(@page.login.estou_pagina?).to be true
+  # expect(@page.login.estou_pagina?).to be true
 end

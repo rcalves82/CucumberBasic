@@ -27,6 +27,6 @@ Quando('eu faço o cadastro desta tarefa') do
 end
 
 Então('devo ver este cadastro na lista com o status {string}') do |status_tarefa|
-  res = @page.tarefas.obter_tr_por_nome(@nova_tarefa[:nome])
-  expect(res).to have_content status_tarefa
+  linha = @page.tarefas.obter_tr_por_nome(@nova_tarefa[:nome])
+  expect(linha).to have_content status_tarefa
 end
