@@ -24,3 +24,7 @@ Procurar bibliotecas Ruby
 Consultar registro no Mongo
 * db.getCollection('tasks').find({'title' : 'Estudar Ruby'})
 
+gerar relatorio comando
+* cucumber --format html --out=log/report.html
+- obs: Para gerar relatorio se faz necessário criar um pasta log no projeto
+

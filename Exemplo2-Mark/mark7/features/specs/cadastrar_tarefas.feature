@@ -5,7 +5,7 @@ Funcionalidade: Cadastrar tarefas
     Sendo um usuário cadastrado
     Posso cadastrar novas tarefas
 
-    @login @nova_tarefa
+    @login @nova_tarefa @nova_task
     Cenario: Nova tarefa
 
         Dado que "Estudar Ruby" é a minha nova tarefa

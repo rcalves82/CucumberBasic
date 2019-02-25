@@ -6,12 +6,12 @@ Funcionalidade: Login
     Posso acessar o sistema com meu e-mail e minha senha
 
 @logout @smoke
-Cenário: Usuário autenticado
+Cenário: Usuario autenticado
 
 	Dado que estou na página de login
 	Quando faço login com "eu@papito.io" e "123456"
 	Então devo ver a mensagem "Olá, Fernando"
-
+@tentativa
 Esquema do Cenario: Tentativa de logar
 
 	Dado que estou na página de login
