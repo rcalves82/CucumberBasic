@@ -17,7 +17,7 @@ end
 After('@logout') do
   @component.nav.sair
   # expect(@page.login.estou_pagina?).to be true
-  sleep 3
+  expect(@page.login.aguarde_o_form).to be true # => retorna o metodo booleano
 end
 
 # imprimir nome do cenario
