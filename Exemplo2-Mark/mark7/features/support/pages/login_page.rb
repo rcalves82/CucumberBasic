@@ -5,6 +5,10 @@ class LoginPage
     visit '/login'
   end
 
+  def aguarde_o_form
+    page.has_css?('#login_form') # => retorna um boolean (true ou false)
+  end
+
   def logar(email, senha)
     find('input[placeholder*=mail]').set email
     find('input[type=password]').set senha
