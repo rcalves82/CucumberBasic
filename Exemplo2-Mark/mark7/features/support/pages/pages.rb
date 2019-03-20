@@ -9,10 +9,11 @@ class Pages
 end
 
 class Components
-  attr_accessor :nav, :side
+  attr_accessor :nav, :side, :modal
 
   def initialize
     self.nav = Navbar.new
     self.side = Sidebar.new
+    self.modal = Modal.new
   end
 end

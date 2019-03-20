@@ -16,7 +16,6 @@ end
 # fazendo logout
 After('@logout') do
   @component.nav.sair
-  # expect(@page.login.estou_pagina?).to be true
   expect(@page.login.aguarde_o_form).to be true # => retorna o metodo booleano
 end
 

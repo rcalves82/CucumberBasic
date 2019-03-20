@@ -10,6 +10,11 @@ class TarefasPage
     end
   end
 
+  def solicita_exclusao(nome)
+    tr = obter_tr_por_nome(nome)
+    tr.find('#delete-button').click
+  end
+
   def botao_novo
     find('button[id^=insert]').click
   end

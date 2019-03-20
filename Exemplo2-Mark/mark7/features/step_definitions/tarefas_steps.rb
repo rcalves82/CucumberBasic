@@ -30,3 +30,24 @@ Então('devo ver este cadastro na lista com o status {string}') do |status_taref
   linha = @page.tarefas.obter_tr_por_nome(@nova_tarefa[:nome])
   expect(linha).to have_content status_tarefa
 end
+
+# Remover
+
+Dado('esta tarefa é indesejada') do
+  steps %(
+    Quando eu faço o cadastro desta tarefa
+  )
+end
+
+Quando('eu solicito a exclusão desta tarefa') do
+  @page.tarefas.solicita_exclusao(@nova_tarefa[:nome])  
+end
+
+Quando('confirmo esta solicitação') do
+  @component.modal.confirma
+  sleep 5
+end
+
+Então('esta tarefa não deve ser exibida na lista') do
+  pending # Write code here that turns the phrase above into concrete actions
+end
