@@ -15,16 +15,29 @@ class TarefasPage
     tr.find('#delete-button').click
   end
 
-  def botao_novo
-    find('button[id^=insert]').click
+  def obter_tr_por_nome(nome)
+    find('table tbody tr', text: nome)
+  end
+
+  def tarefa_existe?(nome)
+    page.has_css?('table tbody tr', text: nome)
+  end
+
+  def tarefa_nao_existe?(nome)
+    page.has_no_css?('table tbody tr', text: nome)
+  end
+
+  # aqui retorna string pq retorna o metodo text
+  def alerta
+    find('.alert-warn').text
   end
 
   def ola
     find('#task-board h3')
   end
 
-  def obter_tr_por_nome(nome)
-    find('table tbody tr', text: nome)
+  def botao_novo
+    find('button[id^=insert]').click
   end
 
   private

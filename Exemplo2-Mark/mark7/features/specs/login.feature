@@ -9,8 +9,8 @@ Funcionalidade: Login
 Cenário: Usuario autenticado
 
 	Dado que estou na página de login
-	Quando faço login com "eu@papito.io" e "123456"
-	Então devo ver a mensagem "Olá, Fernando"
+	Quando faço login com "rclarindo.alves@gmail.com" e "123456"
+	Então devo ver a mensagem "Olá, Lulinha"
 @tentativa
 Esquema do Cenario: Tentativa de logar
 
@@ -30,5 +30,5 @@ Cenario: Bloqueia apos 6 tentativas
 
 	Dado que estou na página de login
 	E a quantidade máxima de login é de 6 tentativas
-	Quando tento logar com "eu@papito.io" e "xpto123"
+	Quando tento logar com "rclarindo.alves@gmail.com" e "xpto123"
 	Então devo ver a mensagem de alerta "Usuário bloqueado. Por favor aguarde 10 segundos, e tente novamente."

@@ -10,7 +10,7 @@ end
 # fazendo login
 Before('@login') do
   @page.login.load
-  @page.login.logar('eu@papito.io', '123456')
+  @page.login.logar('rclarindo.alves@gmail.com', '123456')
 end
 
 # fazendo logout

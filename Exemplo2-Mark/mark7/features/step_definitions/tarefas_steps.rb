@@ -21,6 +21,12 @@ Dado('além disso quero taguear esta tarefa com:') do |table|
   @nova_tarefa[:tags] = table.hashes
 end
 
+Dado('eu já cadastrei esta tarefa antoriormente') do
+  steps %(
+    Quando eu faço o cadastro desta tarefa
+  )
+end
+
 Quando('eu faço o cadastro desta tarefa') do
   @page.tarefas.botao_novo
   @page.tarefas.nova(@nova_tarefa)
@@ -31,23 +37,38 @@ Então('devo ver este cadastro na lista com o status {string}') do |status_taref
   expect(linha).to have_content status_tarefa
 end
 
+Então('devo ver {string} como mensagem de alerta') do |msg_alerta|
+  expect(@page.tarefas.alerta).to eql msg_alerta
+  sleep 5
+end
+
 # Remover
 
 Dado('esta tarefa é indesejada') do
+  @tarefa_indesejada = @nova_tarefa[:nome]
   steps %(
     Quando eu faço o cadastro desta tarefa
   )
 end
 
 Quando('eu solicito a exclusão desta tarefa') do
-  @page.tarefas.solicita_exclusao(@nova_tarefa[:nome])  
+  @page.tarefas.solicita_exclusao(@tarefa_indesejada)
 end
 
 Quando('confirmo esta solicitação') do
   @component.modal.confirma
-  sleep 5
+end
+
+Quando('sou bipolar e quero desistir da solicitação') do
+  @component.modal.cancela
 end
 
 Então('esta tarefa não deve ser exibida na lista') do
-  pending # Write code here that turns the phrase above into concrete actions
+  res = @page.tarefas.tarefa_nao_existe?(@tarefa_indesejada)
+  expect(res).to be true
+end
+
+Então('esta tarefa deve permanecer na lista') do
+  res = @page.tarefas.tarefa_existe?(@tarefa_indesejada)
+  expect(res).to be true
 end

@@ -7,7 +7,7 @@ require 'mongo'
 class MarkDb
   def apaga_tarefa(nome)
     tarefas_collection = client[:tasks]
-    tarefas_collection.delete_one('title' => nome)
+    tarefas_collection.delete_many('title' => nome)
   end
 
   def client
