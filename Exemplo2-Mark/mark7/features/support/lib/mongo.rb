@@ -6,8 +6,17 @@ require 'mongo'
 
 class MarkDb
   def apaga_tarefa(nome)
-    tarefas_collection = client[:tasks]
     tarefas_collection.delete_many('title' => nome)
+  end
+
+  def busca_por_nome(nome)
+    tarefas_collection.find('titel' => nome)
+  end
+
+  private
+
+  def tarefas_collection
+    client[:tasks]
   end
 
   def client

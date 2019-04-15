@@ -10,7 +10,7 @@ Cenário: Usuario autenticado
 
 	Dado que estou na página de login
 	Quando faço login com "rclarindo.alves@gmail.com" e "123456"
-	Então devo ver a mensagem "Olá, Lulinha"
+	Então devo ver a mensagem "Hello, Lulinha"
 @tentativa
 Esquema do Cenario: Tentativa de logar
 
@@ -20,15 +20,15 @@ Esquema do Cenario: Tentativa de logar
 
 	Exemplos: 
       | email               | senha   | mensagem                    |
-      | eu@papito.io        | xpto123 | Senha inválida.             |
-      | eu&gmail.com        | xpto123 | Email incorreto ou ausente. |
-      |                     | xpto123 | Email incorreto ou ausente. |
-      | eu@gmail.com        |         | Senha ausente.              |
-      | rui.alves@gmail.com | xpto123 | Usuário não cadastrado.     |
+      | eu@papito.io        | xpto123 | Incorrect password          |
+      | eu&gmail.com        | xpto123 | Email is required			|
+      |                     | xpto123 | Email is required			|
+      | eu@gmail.com        |         | Password is required        |
+      | rui.alves@gmail.com | xpto123 | User not found				|
 
 Cenario: Bloqueia apos 6 tentativas
 
 	Dado que estou na página de login
 	E a quantidade máxima de login é de 6 tentativas
 	Quando tento logar com "rclarindo.alves@gmail.com" e "xpto123"
-	Então devo ver a mensagem de alerta "Usuário bloqueado. Por favor aguarde 10 segundos, e tente novamente."
+	Então devo ver a mensagem de alerta "Error, too many requests. Please slow down. You must wait 7 seconds before trying again."

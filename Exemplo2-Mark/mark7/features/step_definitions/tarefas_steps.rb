@@ -39,7 +39,11 @@ end
 
 Então('devo ver {string} como mensagem de alerta') do |msg_alerta|
   expect(@page.tarefas.alerta).to eql msg_alerta
-  sleep 5
+end
+
+Então('deve existir somente {int} tarefa com nome cadastrado') do |quantidade|
+  res = MarkDb.new.busca_por_nome(@nova_tarefa[:nome])
+  expect(res.count).to eql quantidade
 end
 
 # Remover
